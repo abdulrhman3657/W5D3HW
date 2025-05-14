@@ -31,11 +31,11 @@ btn_post.addEventListener("click", async () => {
 
         const data = await response.json();
         
-        // console.log(data);
+        console.log(data);
         
         alert("successfull posted");
         
-        getPosts();
+        window.location.href = "./index.html"
             
         } catch (error) {
             console.log(error)

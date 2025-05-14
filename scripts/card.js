@@ -80,7 +80,7 @@ const getPost = async () => {
                 }),
             });
 
-            // window.location.reload();
+            window.location.reload();
 
             })
 
@@ -96,10 +96,6 @@ const getPost = async () => {
 
         comment_btn.addEventListener("click", async () => {
 
-            let username = localStorage.getItem("username")
-            
-
-            // console.log(username)
 
             let comment_input = document.getElementById("comment-input");
 
