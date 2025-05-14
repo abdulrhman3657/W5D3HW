@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo 11</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="https://img.freepik.com/premium-vector/aaa-logo-aaa-alphabet-text-logo_947337-4591.jpg?semt=ais_hybrid&w=740">
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg bg-dark text-light" data-bs-theme="dark">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="#"><img class="rounded-4" height="70px" width="70px" src="https://img.freepik.com/premium-vector/aaa-logo-aaa-alphabet-text-logo_947337-4591.jpg?semt=ais_hybrid&w=740" alt=""></a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse align-items-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html"><button class="btn btn-light">Home</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html"><button class="btn btn-dark">Login</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./signup.html"><button class="btn btn-dark">SignUp</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./profile.html"><button class="btn btn-dark">Profile</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/timeline.html"><button class="btn btn-dark">Time Line</button></a>
+              </li>
+                             <li class="nav-item">
+                <a class="nav-link" href="../pages/search.html"><button class="btn btn-dark">search</button></a>
+              </li>
+            </ul>
+
+            <h3 id="welcome" class="px-lg-5">
+                welcome to my website
+            </h3>
+
+
+          </div>
+
+
+
+        </div>
+    </nav>
+
+
+    <!-- description -->
+    <section class="d-flex flex-column align-items-center justify-content-center">
+        <div class="container p-5 m-5 bg-dark text-light rounded-3">
+
+            <div class="row">
+                <div class="col-lg pb-4">
+                    <img class="rounded-3" width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Aldrin_Apollo_11_original.jpg/500px-Aldrin_Apollo_11_original.jpg" alt="">
+                </div>
+                            <div class="col-lg">
+             <h1>Apollo 11</h1>
+            <p>
+                Apollo 11 was a spaceflight conducted from July 16 to 24, 1969, by the United States and launched by NASA. It marked the first time that humans landed on the Moon. Commander Neil Armstrong and Lunar Module pilot Buzz Aldrin landed the Lunar Module Eagle on July 20, 1969, at 20:17 UTC, and Armstrong became the first person to step onto the Moon's surface six hours and 39 minutes later, on July 21 at 02:56 UTC. Aldrin joined him 19 minutes later, and they spent about two and a quarter hours together exploring the site they had named Tranquility Base upon landing. Armstrong and Aldrin collected 47.5 pounds (21.5 kg) of lunar material to bring back to Earth as pilot Michael Collins flew the Command Module Columbia in lunar orbit, and were on the Moon's surface for 21 hours, 36 minutes, before lifting off to rejoin Columbia.
+            </p>
+            <p>
+                Apollo 11 was launched by a Saturn V rocket from Kennedy Space Center on Merritt Island, Florida, on July 16 at 13:32 UTC. It was the fifth crewed mission of NASA's Apollo program. The Apollo spacecraft had three parts: a command module (CM) with a cabin for the three astronauts, the only part that returned to Earth; a service module (SM), which supported the command module with propulsion, electrical power, oxygen, and water; and a lunar module (LM) that had two stages—a descent stage for landing on the Moon and an ascent stage to place the astronauts back into lunar orbit.
+            </p>
+            <p>
+                After being sent to the Moon by the Saturn V's third stage, the astronauts separated the spacecraft from it and traveled for three days until they entered lunar orbit. Armstrong and Aldrin then moved into Eagle and landed in the Mare Tranquillitatis on July 20. The astronauts used Eagle's ascent stage to lift off from the lunar surface and rejoin Collins in the command module. They jettisoned Eagle before they performed the maneuvers that propelled Columbia out of the last of its 30 lunar orbits onto a trajectory back to Earth.[9] They returned to Earth and splashed down in the Pacific Ocean on July 24 after more than eight days in space.
+            </p>
+            <p>
+                Armstrong's first step onto the lunar surface was broadcast on live TV to a worldwide audience. He described the event as "one small step for [a] man, one giant leap for mankind."[a][15] Apollo 11 effectively proved U.S. victory in the Space Race to demonstrate spaceflight superiority, by fulfilling a national goal proposed in 1961 by President John F. Kennedy, "before this decade is out, of landing a man on the Moon and returning him safely to the Earth."[16]
+            </p>
+            </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!-- comments -->
+    <section class="d-flex flex-column align-items-center justify-content-center">
+        <div class="container-lg  p-5 m-5 bg-dark text-light rounded-3">
+
+
+          <div>
+            <h4 id="err-msg" class="py-3 text-danger"></h4>
+          </div>
+
+        <h1>Comments</h1>
+
+        <!-- <form> -->
+          <div class="mb-3">
+            <label class="form-label">comment here</label>
+            <input type="text" class="form-control" id="comment-input">
+          </div>
+          <button class="btn btn-light" id="comment-btn">Submit</button>
+        <!-- </form> -->
+
+
+        <!-- display comments -->
+        <div id="comments-list" class="pt-4">
+            <ul class="" style="list-style: none; padding: 0;">
+                <li class="p-3 my-3 border rounded">
+                    <div class="d-flex align-items-center">
+                        <p class="fw-bold rounded-3 p-3 bg-light text-dark">Ali02142</p> <p class="px-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, minima!</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        </div>
+    </section>
+
+
+      
+
+    <footer class="bg-dark text-light" data-bs-theme="dark">
+        <div class="container p-4">
+          
+          <div class="row">
+            
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="">About This Page</h5>
+    
+              <p>
+                This is a timeline of Solar System exploration ordering events in the exploration of the Solar System by date of spacecraft launch. The dates listed are launch dates, but the achievements noted may have occurred some time later
+              </p>
+            </div>
+            
+    
+            
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="">Usefull Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Spacecraft" class="text-body">Spacecrafts</a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Outer_space" class="text-body">space</a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Planetary_science" class="text-body">Planetary science</a>
+                </li>
+              </ul>
+            </div>
+            
+    
+
+            
+          </div>
+          
+        </div>
+        
+    
+        
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2025 Copyright:
+          <span class="text-body" href="https://mdbootstrap.com/">MyWebsite.com</span>
+        </div>
+        
+    </footer>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/comments.js"></script>
+</body>
+</html>

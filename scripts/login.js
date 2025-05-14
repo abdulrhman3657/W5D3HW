@@ -1,6 +1,5 @@
 let apiUrl = "https://682199fa259dad2655afc100.mockapi.io/"
 
-
 let login_btn = document.getElementById("login-btn");
 let login_username = document.getElementById("username-id");
 let login_password = document.getElementById("password-id");
@@ -21,7 +20,8 @@ const login = async () => {
             return user.username == login_username.value && user.password == login_password.value
         });
 
-        console.log(userExist);
+        // console.log(userExist.username);
+        localStorage.setItem("username", userExist.username);
 
         if(!userExist){
             alert("invalid username or password");
