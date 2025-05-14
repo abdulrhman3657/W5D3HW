@@ -96,24 +96,28 @@ const getPost = async () => {
 
         comment_btn.addEventListener("click", async () => {
 
+        if(!localStorage.getItem("username")){
+            alert("you must log in to comment")
+            return
+        }
 
-            let comment_input = document.getElementById("comment-input");
+        let comment_input = document.getElementById("comment-input");
 
-            comments.push({username: localStorage.getItem("username"), comment: comment_input.value})
+        comments.push({username: localStorage.getItem("username"), comment: comment_input.value})
 
-            const response = await fetch(`${apiUrl}/posts/${post_id}`, {
-                method: "PUT",
-                headers: {
-                "Content-type": "application/json",
-                },
-                body: JSON.stringify({
-                imageURL: url,
-                text: post_txt,
-                comments: comments,
-                }),
-            });
+        const response = await fetch(`${apiUrl}/posts/${post_id}`, {
+            method: "PUT",
+            headers: {
+            "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+            imageURL: url,
+            text: post_txt,
+            comments: comments,
+            }),
+        });
 
-            window.location.reload();
+        // window.location.reload();
 
 
         })
