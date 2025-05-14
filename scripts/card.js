@@ -32,6 +32,8 @@ const getPost = async () => {
             let item_div = document.createElement("div");
             item_div.classList.add("d-flex");
             item_div.classList.add("align-items-center");
+            item_div.classList.add("justify-content-between");
+
 
             let p1 = document.createElement("p");
             p1.classList.add("fw-bold");
@@ -40,16 +42,51 @@ const getPost = async () => {
             p1.classList.add("bg-light");
             p1.classList.add("text-dark");
             
-            p1.innerText = Comment.username //."username"// post.user //"username";
+            p1.innerText = Comment.username
 
-            console.log(post)
+            // console.log(post)
 
             let p2 = document.createElement("p");
             p2.classList.add("px-3");
             p2.innerText = Comment.comment;
 
+            let del_btn = document.createElement("button")
+            del_btn.classList.add("btn");
+            del_btn.classList.add("btn-danger");
+            del_btn.innerText = "Delete"
+
+            del_btn.addEventListener("click", async () => {
+                if (Comment.username != localStorage.getItem("username")){
+                    alert("you can only delete your comments")
+                    return
+                }
+
+                comments = comments.filter((item) => {
+                    console.log(item.username)
+                    return item.username != localStorage.getItem("username")
+                })
+
+                // console.log(comments)
+
+            const response = await fetch(`${apiUrl}/posts/${post_id}`, {
+                method: "PUT",
+                headers: {
+                "Content-type": "application/json",
+                },
+                body: JSON.stringify({
+                imageURL: url,
+                text: post_txt,
+                comments: comments,
+                }),
+            });
+
+            // window.location.reload();
+
+            })
+
             item_div.appendChild(p1);
             item_div.appendChild(p2);
+            item_div.appendChild(del_btn)
             card_comment.appendChild(item_div);
 
             comments_list.appendChild(card_comment)
@@ -62,7 +99,7 @@ const getPost = async () => {
             let username = localStorage.getItem("username")
             
 
-            console.log(username)
+            // console.log(username)
 
             let comment_input = document.getElementById("comment-input");
 

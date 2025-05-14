@@ -6,6 +6,11 @@ btn_post.addEventListener("click", async () => {
 
     let post_img = document.getElementById("post-img");
     let post_text = document.getElementById("post-text");
+
+    if(!localStorage.getItem("username")){
+        alert("you must log in to post")
+        return
+    }
     
     try {
 
