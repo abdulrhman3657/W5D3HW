@@ -20,8 +20,7 @@ btn_post.addEventListener("click", async () => {
             body: JSON.stringify({
             imageURL: post_img.value,
             text: post_text.value,
-            comments: [],
-            user: localStorage.getItem("username")
+            comments: []
             }),
         });
 

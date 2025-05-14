@@ -40,13 +40,13 @@ const getPost = async () => {
             p1.classList.add("bg-light");
             p1.classList.add("text-dark");
             
-            p1.innerText = post.user//"username";
+            p1.innerText = Comment.username //."username"// post.user //"username";
 
             console.log(post)
 
             let p2 = document.createElement("p");
             p2.classList.add("px-3");
-            p2.innerText = Comment;
+            p2.innerText = Comment.comment;
 
             item_div.appendChild(p1);
             item_div.appendChild(p2);
@@ -58,10 +58,15 @@ const getPost = async () => {
         let comment_btn = document.getElementById("comment-btn")
 
         comment_btn.addEventListener("click", async () => {
+
+            let username = localStorage.getItem("username")
             
+
+            console.log(username)
+
             let comment_input = document.getElementById("comment-input");
 
-            comments.push(comment_input.value)
+            comments.push({username: localStorage.getItem("username"), comment: comment_input.value})
 
             const response = await fetch(`${apiUrl}/posts/${post_id}`, {
                 method: "PUT",
